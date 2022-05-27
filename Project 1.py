@@ -13,7 +13,7 @@ import psutil
 import csv
 import os
 from time import time, sleep
-import resource
+
 def create_csv(filename):
 
     headerList = ['CPU', 'RSS[Gb]', 'VMS[Gb]']
@@ -37,5 +37,5 @@ def collect_log(filename):
         f.write("\n")
     create_csv(filename)
 
-timer = float(input("Put interval: "))
+timer = float(input("Set time interval: "))
 create_csv('Data.csv')
